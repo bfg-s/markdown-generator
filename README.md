@@ -13,39 +13,6 @@ Generator of standard Markdown in PHP style
 ```bash
 composer require bfg/markdown-generator
 ```
-after install your package please run this command
-
-```bash
-php artisan markdown-generator:install
-```
-
-
-
-## Publish Assets
-
-you can publish config file by use this command
-
-```bash
-php artisan vendor:publish --tag="markdown-generator-config"
-```
-
-you can publish views file by use this command
-
-```bash
-php artisan vendor:publish --tag="markdown-generator-views"
-```
-
-you can publish languages file by use this command
-
-```bash
-php artisan vendor:publish --tag="markdown-generator-lang"
-```
-
-you can publish migrations file by use this command
-
-```bash
-php artisan vendor:publish --tag="markdown-generator-migrations"
-```
 
 ## Changelog
 
