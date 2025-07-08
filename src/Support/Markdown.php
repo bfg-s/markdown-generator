@@ -24,8 +24,9 @@ class Markdown
             return static::$documents[$name];
         }
 
-        return static::$documents[$name] = AnonymousMarkdownDocument::make()
-            ->setName($name);
+        static::$documents[$name] = AnonymousMarkdownDocument::make();
+        static::$documents[$name]->setName($name);
+        return static::$documents[$name];
     }
 
     public static function __callStatic(string $name, array $arguments)

@@ -301,6 +301,11 @@ class MarkdownService
         return trim($this->document, PHP_EOL);
     }
 
+    public function __toString(): string
+    {
+        return $this->getDocument();
+    }
+
     public function download(string|null $fileName = null): \Illuminate\Http\Response
     {
         return response($this->getDocument())
