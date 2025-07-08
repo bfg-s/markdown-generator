@@ -13,7 +13,12 @@ class Markdown
      */
     protected static array $documents = [];
 
-    public static function from(string $name)
+    public static function anonymous(): AnonymousMarkdownDocument
+    {
+        return AnonymousMarkdownDocument::make();
+    }
+
+    public static function from(string $name): AnonymousMarkdownDocument
     {
         if (isset(static::$documents[$name])) {
             return static::$documents[$name];

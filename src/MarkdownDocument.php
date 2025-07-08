@@ -28,6 +28,11 @@ abstract class MarkdownDocument
         throw new \BadMethodCallException("Method {$name} does not exist in MarkdownService.");
     }
 
+    public function __toString(): string
+    {
+        return $this->md()->getDocument();
+    }
+
     public static function make(...$arguments): static
     {
         return new static(...$arguments);
